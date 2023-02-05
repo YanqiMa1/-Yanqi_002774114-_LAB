@@ -117,6 +117,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="fieldObservationID">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="fieldObservationIDFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="fieldBloodPressure">
         </Component>

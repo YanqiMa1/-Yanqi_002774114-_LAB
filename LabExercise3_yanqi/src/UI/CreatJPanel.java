@@ -63,6 +63,12 @@ public class CreatJPanel extends javax.swing.JPanel {
 
         jLabel3.setText("Temperature");
 
+        fieldObservationID.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                fieldObservationIDFocusLost(evt);
+            }
+        });
+
         jLabel4.setText("Create a  Vital Sign");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -137,6 +143,18 @@ public class CreatJPanel extends javax.swing.JPanel {
        history.createObservation(Integer.valueOf(id), Double.valueOf(bloodPressure),Double.valueOf(temperature));
        JOptionPane.showMessageDialog(null, "Added observation");
     }//GEN-LAST:event_addObservationBtnActionPerformed
+
+    private void fieldObservationIDFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fieldObservationIDFocusLost
+        int id = Integer.valueOf(fieldObservationID.getText());
+        Boolean isUnique = this.application.getHistory().checkObservationIdUnique(id);
+        if(isUnique){
+            
+        }else{
+            fieldObservationID.setText("");
+            JOptionPane.showMessageDialog(null,"ID already exists!");
+            
+        }
+    }//GEN-LAST:event_fieldObservationIDFocusLost
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
