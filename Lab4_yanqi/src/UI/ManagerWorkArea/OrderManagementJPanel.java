@@ -25,7 +25,7 @@ public class OrderManagementJPanel extends javax.swing.JPanel {
         initComponents();
     }
     
-    OrderManagementJPanel(Business business, UserAccount useraccount){
+    public OrderManagementJPanel(Business business, UserAccount useraccount){
         initComponents();
         this.business=business;
         this.useraccount=useraccount;
@@ -112,14 +112,14 @@ public class OrderManagementJPanel extends javax.swing.JPanel {
     public void populateDp(){
         jComboBox1.removeAllItems();
         for (DeliveryAgent d: this.business.getDeliverAgentDirectory().getAgentList() ){
-            jComboBox1.addItem(String.valueOf(d));
+            jComboBox1.addItem(d);//转化？
         }
     }
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton assignBtn;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<DeliveryAgent> jComboBox1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables

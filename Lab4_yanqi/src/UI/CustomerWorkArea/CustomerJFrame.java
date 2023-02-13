@@ -62,7 +62,7 @@ public class CustomerJFrame extends javax.swing.JFrame {
                 logOutBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(logOutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 36, 99, -1));
+        jPanel1.add(logOutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 99, -1));
 
         jSplitPane1.setTopComponent(jPanel1);
 
@@ -70,7 +70,7 @@ public class CustomerJFrame extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("jLabel1");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 72, 29));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 129, 72, 20));
 
         jButton1.setText("place order");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -78,10 +78,10 @@ public class CustomerJFrame extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, -1, -1));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, -1, -1));
 
-        jLabel2.setText("jLabel2");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, -1, -1));
+        jLabel2.setText("user name:");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, -1));
 
         jSplitPane1.setRightComponent(jPanel2);
 

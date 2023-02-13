@@ -26,8 +26,9 @@ public class CustomerManagementJPanel extends javax.swing.JPanel {
         initComponents();
         
     }
+    //上面的待删
     
-    CustomerManagementJPanel(Business business,UserAccount useraccount){
+    public CustomerManagementJPanel(Business business,UserAccount useraccount){
         initComponents();
         this.business=business;
         this.useraccount=useraccount;
@@ -52,18 +53,22 @@ public class CustomerManagementJPanel extends javax.swing.JPanel {
         addBtn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        add(fieldage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 120, -1));
-        add(fieldUsername1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 120, -1));
+        add(fieldage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 120, -1));
+        add(fieldUsername1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 120, -1));
 
         fieldname1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldname1ActionPerformed(evt);
             }
         });
-        add(fieldname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 120, -1));
-        add(fieldpassword1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 120, -1));
+        add(fieldname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 120, -1));
+        add(fieldpassword1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 120, -1));
 
         addBtn.setText("add customer");
         addBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -71,7 +76,7 @@ public class CustomerManagementJPanel extends javax.swing.JPanel {
                 addBtnActionPerformed(evt);
             }
         });
-        add(addBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
+        add(addBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, -1, -1));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -95,6 +100,18 @@ public class CustomerManagementJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(jTable1);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 400, 320));
+
+        jLabel1.setText("age");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 50, -1));
+
+        jLabel2.setText("name");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
+
+        jLabel3.setText("UserName");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+
+        jLabel4.setText("password");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
@@ -103,7 +120,7 @@ public class CustomerManagementJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Sorry credentials are taken");
         }
         else{
-            System.out.println(fieldUsername1.getText());
+//            System.out.println(fieldUsername1.getText());
             UserAccount user = this.business.getUseraccountDirectory().createUserAccount(fieldUsername1.getText(),fieldpassword1.getText(),"customer");
             this.business.getCustomerDirectory().createCustomer(user.getAccountId(),fieldname1.getText(),fieldage1.getText());
             populate();
@@ -135,6 +152,10 @@ public class CustomerManagementJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField fieldage1;
     private javax.swing.JTextField fieldname1;
     private javax.swing.JTextField fieldpassword1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables

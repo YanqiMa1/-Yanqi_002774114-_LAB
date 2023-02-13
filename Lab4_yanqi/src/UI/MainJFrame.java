@@ -20,7 +20,7 @@ public class MainJFrame extends javax.swing.JFrame {
      */
     private Business business;
     private UserAccountDirectory useraccountDirectory;
-    private UserAccount user;
+//    private UserAccount user;
     
     public MainJFrame() {
         initComponents();
@@ -32,7 +32,7 @@ public class MainJFrame extends javax.swing.JFrame {
         initComponents();
         this.setVisible(true);
         this.business=business;
-        this.user = user;
+//        this.user = user;
         this.useraccountDirectory=business.getUseraccountDirectory();
         
     }
@@ -52,6 +52,8 @@ public class MainJFrame extends javax.swing.JFrame {
         userNamejField = new javax.swing.JTextField();
         passwordJField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 204));
@@ -72,6 +74,12 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jLabel1.setText("welcome to resraurant management!");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, -1, -1));
+
+        jLabel2.setText("Password");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, -1, -1));
+
+        jLabel3.setText("User Name");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -130,6 +138,8 @@ public class MainJFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JButton loginBtn;
     private javax.swing.JTextField passwordJField;
     private javax.swing.JTextField userNamejField;

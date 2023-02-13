@@ -23,7 +23,7 @@ public class Order {
         this.agent = new DeliveryAgent();
         this.status = "Created";
         this.count++;
-        this.orderID="ORDER"+this.count;        
+        this.orderID = "ORDER"+this.count;        
           
     }
     public Order(Customer customer,DeliveryAgent agent){
